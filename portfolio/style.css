@@ -1,9 +1,8 @@
 *{
     font-family: Rubik, sans-serif;
-}
-
-body {
-    margin: 20px 30px;
+    margin: 0%;
+    
+    background-color: red;
 }
 
 /* <----- NAVIGATION BAR ------> */
@@ -14,6 +13,9 @@ body {
     align-items: center;
 
     padding: 5px 20px;
+    background-color: rgb(231,233,235);
+
+    border: 2px solid red;
 }
 
 .logo img {
@@ -25,6 +27,8 @@ body {
     display: flex;
     gap: 80px;
     justify-content: space-between;
+
+    max-width: 60%;
 }
 
 a {
@@ -42,8 +46,9 @@ a {
     grid-template-columns: 38% 58%;
     justify-content: space-between;
 
-    border: 2px solid purple;
-    height: 480px
+    /* border: 2px solid purple; */
+    height: 480px;
+    background-color: rgb(231,233,235);
 }
 
 .hero-img, .hero-text {
@@ -81,12 +86,29 @@ button {
 .primary {
     background-color: black;
     color: white;
+    padding: 8px;
+    border-radius: 10px;
 }
 
 .secondary {
     background-color: white;
     color: black;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid gray;
 }
+
+.primary:hover {
+    box-sizing: border-box;
+    transform: scale(1.02);
+}
+
+.secondary:hover {
+    box-sizing: border-box;
+    transform: scale(1.02);
+    background-color: rgb(252,247,239);
+}
+
 
 /* <------ ABOUT SECTION ------> */
 
@@ -127,7 +149,6 @@ button {
 }
 
 .position-text {
-    position: absolute;
     top: 20px;
 }
 
@@ -140,7 +161,6 @@ button {
 /* <----- SKILLS SECTION ------> */
 
 .skills {
-    /* text-align: center; */
     border: 2px solid red;
 }
 
@@ -166,6 +186,9 @@ button {
 .skills-list {
     padding: 0;
     justify-content: left;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
 }
 
 .web-development, .ui-design {
@@ -176,7 +199,13 @@ button {
     display: flex;
     align-items: center;
     gap: 20px;
-    max-width: 60%;
+    max-width: 80%;
+}
+
+.skill-container:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    font-weight: 450;
 }
 
 .skill-container img {
@@ -242,6 +271,37 @@ button {
     justify-content: space-between;
 }
 
+.box-1 .primary {
+    background-color: #0D23ED;
+    border: 1px solid white;
+}
+
+.box-1 .secondary {
+    background-color: #000000;
+    color: white;
+}
+
+.box-2 .primary {
+    background-color: #7E56DA;
+    border: 1px solid white;
+}
+
+.box-2 .secondary {
+    background-color: black;
+    color: white;
+}
+
+.box-3 .primary {
+    background-color: #55595D;
+    border: 1px solid white;
+}
+
+.box-3 .secondary {
+    background-color: black;
+    color:white;
+}
+
+
 /* <----- CLIENTS SECTION ----->  */
 
 .clients {
@@ -253,7 +313,7 @@ button {
 
 .clients p{
     top: 45px;
-    margin: -15px 0 30px 0;
+    margin: 0 0 30px 0;
 }
 
 .clients-logos {
@@ -373,4 +433,43 @@ input {
 
 input:focus::placeholder {
     color: transparent;
+}
+
+/* <---- FOOTER SECTION -----> */
+
+.footer {
+    border: 2px solid red;
+    text-align: center;
+
+    padding: 20px 50px;
+}
+
+.footer-logo {
+    border: 2px solid purple;
+    justify-content: center;
+}
+
+.footer-logo p {
+    margin: 10px 0 0 0;
+}
+
+.footer-social-icons {
+    border: 2px solid green;
+    margin: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.footer-social-icons img {
+    height: 30px;
+    cursor: pointer;
+}
+
+.footer-copyright {
+    border: 2px solid purple;
+}
+
+.footer-copyright p {
+    margin: 0 0 0 0;
 }
