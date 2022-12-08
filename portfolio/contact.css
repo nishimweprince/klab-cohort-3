@@ -7,6 +7,8 @@
 .nav-hero {
     background-image: url('./img/contact-page/contact-hero-1.jpg');
     background-size: cover;
+
+    padding: 20px 30px;
 }
 
 /* <----- NAVIGATION BAR ------> */
@@ -16,7 +18,8 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 40px 50px;
+    padding: 40px 80px;
+
     /* border: 2px solid red; */
 }
 
