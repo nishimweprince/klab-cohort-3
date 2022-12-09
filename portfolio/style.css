@@ -4,6 +4,13 @@
     padding: 0;
 }
 
+.nav-hero {
+    background-color: rgb(231,233,235);
+    /* border: 2px solid red; */
+
+    padding: 20px 30px;
+}
+
 /* <----- NAVIGATION BAR ------> */
 
 .nav-bar {
@@ -11,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 40px 50px;
+    padding: 40px 80px;
     background-color: rgb(231,233,235);
 
     /* border: 2px solid red; */
@@ -56,7 +63,7 @@
 
 .hero-img, .hero-text {
     /* border: 2px solid red; */
-    padding: 30px;
+    padding: 10px 40px;
 }
 
 .hero-img {
@@ -66,7 +73,7 @@
 }
 
 .hero-text {
-    padding: 40px;
+    padding: 40px 40px;
 }
 
 .hero-text-brand {
@@ -128,7 +135,7 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    padding: 0 0 0 80px;
+    padding: 0 10px 0 80px;
 
     /* border: 2px solid green; */
 }
@@ -136,12 +143,13 @@ button:hover {
 .about-img, .about-text {
     width: auto;
     /* border: 2px solid purple; */
-    margin: 10px 30px;
+    margin: 10px 10px;
 }
 
 .img-holder img {
     height: 300px;
     border-radius: 50%;
+    padding: 30px;
 }
 
 .about-text {
@@ -175,7 +183,7 @@ button:hover {
 .skills-container {
     display: grid;
     grid-template-columns: 40% 40%;
-    justify-content: space-evenly;
+    justify-content: end;
     align-items: center;
     gap: 60px;
 
@@ -201,6 +209,14 @@ button:hover {
 
 .web-development, .ui-design {
     padding: 0 70px;
+}
+
+.web-development {
+    justify-content: flex-end;
+}
+
+.ui-design {
+    justify-content: flex-end;
 }
 
 .web-development h4, .ui-design h4 {
@@ -229,24 +245,23 @@ button:hover {
 
 .recent-work {
     /* border: 2px solid purple; */
-    padding: 20px 40px 0 40px;
+    padding: 20px 30px 0 30px;
     height: auto;
 
     text-align: center;
 }
 
 .recent-work h2 {
-    padding: 10px 20px;
+    padding: 10px 0px;
 }
 
 .work-boxes-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     height: 550px;
-    position: relative;
 
-    padding: 20px 30px 0 30px;
+    padding: 20px 50px 0 50px;
     /* border: 2px solid red; */
 }
 
@@ -319,8 +334,8 @@ button:hover {
 .work-box {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    height: auto;
-    padding: 10px 10px 0 10px;
+    padding: 10px 0;
+    max-width: 30%;
 
     border: 1px solid gray;
     border-radius: 10px;
@@ -329,8 +344,8 @@ button:hover {
 }
 
 .img-container img {
-    height: 250px;
-    width: 100%;
+    height: 210px;
+    width: auto;
     border-radius: 10px;
 }
 
@@ -338,7 +353,7 @@ button:hover {
     display: grid;
     gap: 5px;
 
-    padding: 0 20px;
+    padding: 0 10px;
     text-align: center;
 }
 
@@ -354,11 +369,11 @@ button:hover {
 .work-cta-container {
     margin: 20px auto;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     text-align: center;
 
-    max-height: 40px;
+    max-height: 30px;
 }
 
 .work-cta-container button {
@@ -403,9 +418,10 @@ button:hover {
 
 .clients {
     /* border: 2px solid red; */
-    padding: 80px 50px;
+    padding: 50px 50px;
 
     text-align: center;
+    margin: 40px 0 10px 0;
 }
 
 .clients p{
@@ -419,7 +435,7 @@ button:hover {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 
-    margin: 10px 0;
+    margin: 10px auto;
 }
 
 .clients-logos img {
@@ -433,7 +449,9 @@ button:hover {
 .blog-section {
     /* border: 2px red solid; */
     text-align: center;
-    padding: 20px 40px;
+    padding: 20px 60px;
+
+    margin: 10px 30px;
 }
 
 .blog-section h2 {
@@ -443,7 +461,7 @@ button:hover {
 .blogs-container {
     display: flex;
     gap: 20px;
-    padding: 20px 40px;
+    padding: 20px 60px;
     height: auto;
 
     position: relative;
@@ -478,7 +496,6 @@ button:hover {
 
 .blog-card a {
     font-size: 20px;
-    margin: 50px;
     text-decoration: underline;
     color: #0D298F;
     font-weight: medium;
@@ -506,17 +523,14 @@ button:hover {
 .contact-section form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
     padding: 30px;
-    justify-content:center;
     text-align: left;
 }
 
 form .address {
     display: flex;
     flex-direction: column;
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: space-evenly;
+    justify-content: flex-end;
     padding-bottom: 0;
 }
 
@@ -527,6 +541,7 @@ form .address {
 form .message {
     display: grid;
     justify-content: center;
+    padding: 0 20px;
 }
 
 form .message textarea {
@@ -542,13 +557,6 @@ form label {
     margin: 10px 0;
 }
 
-.form-container .contact-submit {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    cursor: pointer;
-}
-
 input {
     padding: 10px;
     height: 20px;
@@ -560,6 +568,23 @@ input {
 
 input:focus::placeholder {
     color: transparent;
+}
+
+.form-container button {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    font-weight: medium;
+    border-radius: 10px;
+
+    margin: 0 auto;
+}
+
+button:hover {
+    transform: scale(1.05);
 }
 
 /* <---- FOOTER SECTION -----> */
