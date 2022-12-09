@@ -89,7 +89,6 @@ button {
 }
 
 button:hover {
-    transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -230,7 +229,7 @@ button:hover {
 
 .recent-work {
     /* border: 2px solid purple; */
-    padding: 20px 30px 0 30px;
+    padding: 20px 40px 0 40px;
     height: auto;
 
     text-align: center;
@@ -245,9 +244,76 @@ button:hover {
     justify-content: space-between;
     gap: 20px;
     height: 550px;
+    position: relative;
 
     padding: 20px 30px 0 30px;
     /* border: 2px solid red; */
+}
+
+.dots {
+    display: flex;
+    gap: 20px;
+
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin: 20px 0;
+    cursor: pointer;
+    transform: translate(-50%, 0);
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: white;
+    /* border: 2px solid rgb(61, 60, 60); */
+    box-shadow: 2px 1px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.dot:hover {
+    transform: scale(1.08);
+}
+
+.dot--fill {
+    background-color: rgb(39,39,39);
+}
+
+.btn {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    
+    top: 50%;
+    /* transform: translate(0, -50%); */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 10px;
+
+    background-color: rgb(39,39,39);
+    color: white;
+}
+
+.btn--left {
+    left: 0;
+    transform: translate(-50%, 0);
+}
+
+.btn--right {
+    right: 0;
+    transform: translate(50%, 0);
+}
+
+.btn-icon {
+    height: 28px;
+    width: 28px;
 }
 
 .work-box {
@@ -337,7 +403,7 @@ button:hover {
 
 .clients {
     /* border: 2px solid red; */
-    padding: 50px 50px;
+    padding: 80px 50px;
 
     text-align: center;
 }
@@ -379,6 +445,8 @@ button:hover {
     gap: 20px;
     padding: 20px 40px;
     height: auto;
+
+    position: relative;
 
     /* border: 2px solid purple; */
 }
@@ -422,6 +490,8 @@ button:hover {
     /* border: 2px solid darkblue; */
     padding: 30px;
     text-align: center;
+
+    margin: 50px auto;
 }
 
 .form-container {
