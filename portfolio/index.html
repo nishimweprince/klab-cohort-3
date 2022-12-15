@@ -53,12 +53,24 @@
 
             </div>
             
-            <div class="hero-text-cta">
+            <section class="hero-cta">
 
-                <button class="primary hero-cta">Reach Out</button>
-                <button class="secondary hero-cta">Explore More ↓</button>
+                <div class="hero-text-cta">
+                <button class="primary hero-cta-btn">Reach Out</button>
+                <button class="secondary hero-cta-btn">Explore More 
+                <span>
+                    ↓
+                </span>
+            </button>
+                </div>
 
-            </div>
+                <div class="hero-newsletter">
+                    <button class="primary newsletter-btn">
+                        Subscribe to my newsletter
+                    </button>
+                </div>
+
+            </section>
 
         </div>
 
@@ -67,6 +79,52 @@
         </div>
 
     </div>
+
+    </div>
+
+    <!-- MODAL SECTION -->
+
+    <div class="modal-container">
+
+        <div class="newsletter-form-container">
+
+            <form action="" class="newsletter-form">
+                <div class="address-name">
+                    <input type="text" name="name" placeholder="Full Name" id="fullname" required>
+                </div>
+
+                <div class="address-email">
+                    <input type="email" name="email" placeholder="Email" id="email" required>
+                    <label for="email-err" id="email-err">
+                        Please enter a valid email!
+                    </label>
+                </div>
+
+                <div class="category">
+                    <select name="profession" id="profession">
+                        <option value="category-default">What best describes you:</option>
+                        <option value="profession-student">Student</option>
+                        <option value="profession-innovator">Innovator</option>
+                        <option value="profession-it-talent">IT Talent</option>
+                      </select>
+                      <label for="category" id="err-category">
+                        Please select an option
+                      </label>
+                </div>
+
+                <div class="newsletter-cta">
+                    <button class="primary newsletter-submit">
+                        Subscribe
+                    </button>
+                </div>
+
+            </form>
+
+            <button class="secondary newsletter-cancel">
+                Close
+            </button>
+
+        </div>
 
     </div>
 
@@ -399,5 +457,6 @@
     </div>
 
     
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+</head>
+<body>
+
+    <div class="hero-nav">
+
+        <button class="primary modal-open">
+            Open
+        </button>
+
+        <div class="modal-container">
+
+            <div class="newsletter-form-container">
+
+                <form action="" class="newsletter-form">
+                    <div class="address-name">
+                        <input type="text" name="name" placeholder="Full Name" id="fullname">
+                    </div>
+
+                    <div class="address-email">
+                        <input type="email" name="email" placeholder="Email" id="email">
+                        <label for="email-err" id="email-err">
+                            Please enter a valid email!
+                        </label>
+                    </div>
+
+                    <div class="category">
+                        <select name="profession" id="profession">
+                            <option value="category-default">What best describes you:</option>
+                            <option value="profession-student">Student</option>
+                            <option value="profession-innovator">Innovator</option>
+                            <option value="profession-it-talent">IT Talent</option>
+                          </select>
+                          <label for="category" id="err-category">
+                            Please select an option
+                          </label>
+                    </div>
+
+                    <div class="newsletter-cta">
+                        <button class="primary newsletter-submit">
+                            Subscribe
+                        </button>
+                    </div>
+
+            </form>
+
+            <button class="secondary newsletter-cancel">
+                Close
+            </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+    <script src="modal.js"></script>
+
+</body>
+</html>
