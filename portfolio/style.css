@@ -718,7 +718,7 @@ body.fixed-scroll {
     place-items: center;
 }
 
-.address-email label, .category label {
+.address-email label, .category label, .address-name label {
     display: none;
     color: red;
 }
@@ -727,7 +727,11 @@ body.fixed-scroll {
     display: block;
 }
 
-.category select .err-category {
+.category .err-category {
+    display: block;
+}
+
+.address-name .err-fullname {
     display: block;
 }
 
@@ -771,4 +775,15 @@ input:focus::placeholder {
 .newsletter-cancel {
     max-width: 50%;
     margin: 0 auto;
+}
+
+.form-feedback{
+    color: green;
+    display: none;
+
+    margin: -5px 0 10px 0;
+}
+
+.form-feedback-show {
+    display: block;
 }

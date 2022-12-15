@@ -91,6 +91,10 @@
             <form action="" class="newsletter-form">
                 <div class="address-name">
                     <input type="text" name="name" placeholder="Full Name" id="fullname" required>
+
+                    <label for="name" id="err-fullname">
+                        Please enter a valid name!
+                      </label>
                 </div>
 
                 <div class="address-email">
@@ -108,7 +112,7 @@
                         <option value="profession-it-talent">IT Talent</option>
                       </select>
                       <label for="category" id="err-category">
-                        Please select an option
+                        Please choose your identification!
                       </label>
                 </div>
 
@@ -117,6 +121,10 @@
                         Subscribe
                     </button>
                 </div>
+
+            <p class="form-feedback">
+                You have subscribed successfully!
+            </p>
 
             </form>
 
