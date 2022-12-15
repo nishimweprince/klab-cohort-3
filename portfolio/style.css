@@ -1,8 +1,14 @@
 *{
     font-family: Rubik, sans-serif;
-    margin: 0%;
-    
-    background-color: red;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-hero {
+    background-color: rgb(231,233,235);
+    /* border: 2px solid red; */
+
+    padding: 20px 30px;
 }
 
 /* <----- NAVIGATION BAR ------> */
@@ -12,10 +18,10 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 5px 20px;
+    padding: 40px 80px;
     background-color: rgb(231,233,235);
 
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .logo img {
@@ -31,17 +37,21 @@
     max-width: 60%;
 }
 
-a {
+.nav-links a {
     text-decoration: none;
     color: black;
-    font-weight: 400;
+    font-weight: 600;
 }
 
+.nav-link-container:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
 
 /* <------ HERO SECTION ------->*/
 
 .hero {
-    padding: 40px 10px;
+    padding: 40px 30px;
     display: grid;
     grid-template-columns: 38% 58%;
     justify-content: space-between;
@@ -52,8 +62,8 @@ a {
 }
 
 .hero-img, .hero-text {
-    border: 2px solid red;
-    padding: 30px;
+    /* border: 2px solid red; */
+    padding: 10px 40px;
 }
 
 .hero-img {
@@ -63,11 +73,12 @@ a {
 }
 
 .hero-text {
-    padding: 40px;
+    padding: 40px 40px;
 }
 
 .hero-text-brand {
     margin: 30px auto;
+    line-height: 1.5;
 }
 
 .hero-text-cta {
@@ -78,15 +89,20 @@ a {
 }
 
 button {
-    text-align: center;
+    padding: 15px 18px;
+    max-height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
     cursor: pointer;
-    padding: 5px;
 }
 
 .primary {
     background-color: black;
     color: white;
-    padding: 8px;
+    padding: 10 px;
     border-radius: 10px;
 }
 
@@ -96,17 +112,18 @@ button {
     padding: 8px;
     border-radius: 10px;
     border: 1px solid gray;
+
+    font-weight: bold;
 }
 
 .primary:hover {
     box-sizing: border-box;
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 .secondary:hover {
     box-sizing: border-box;
-    transform: scale(1.02);
-    background-color: rgb(252,247,239);
+    transform: scale(1.05);
 }
 
 
@@ -118,19 +135,21 @@ button {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    padding: 0 10px 0 80px;
 
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 
 .about-img, .about-text {
     width: auto;
-    border: 2px solid purple;
-    margin: 10px 30px;
+    /* border: 2px solid purple; */
+    margin: 10px 10px;
 }
 
 .img-holder img {
     height: 300px;
     border-radius: 50%;
+    padding: 30px;
 }
 
 .about-text {
@@ -140,6 +159,7 @@ button {
 .about-text-summary {
     position: relative;
     padding: 0;
+    line-height: 1.5;
 }
 
 .about-text-summary, .summary {
@@ -160,46 +180,55 @@ button {
 
 /* <----- SKILLS SECTION ------> */
 
-.skills {
-    border: 2px solid red;
-}
-
 .skills-container {
     display: grid;
     grid-template-columns: 40% 40%;
-    justify-content: space-evenly;
+    justify-content: end;
     align-items: center;
     gap: 60px;
 
-    border: 2px solid green;
+    /* border: 2px solid green; */
     padding: 20px 40px;
     margin: 30px 0 30px 0;
 }
 
 .skills h2 {
-    text-decoration: underline;
-    left: 30%;
-
-    padding: 0 30px;
+    padding: 20px 30px 0 30px;
+    text-align: center;
 }
 
 .skills-list {
-    padding: 0;
+    padding: 20px;
     justify-content: left;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
+    gap: 30px;
+
+    text-align: left;
 }
 
 .web-development, .ui-design {
-    padding: 0 40px;
+    padding: 0 70px;
+}
+
+.web-development {
+    justify-content: flex-end;
+}
+
+.ui-design {
+    justify-content: flex-end;
+}
+
+.web-development h4, .ui-design h4 {
+    margin: 10px;
+    padding: 0 0 0 12px;
 }
 
 .skill-container {
     display: flex;
     align-items: center;
     gap: 20px;
-    max-width: 80%;
+    max-width: 100%;
 }
 
 .skill-container:hover {
@@ -215,34 +244,108 @@ button {
 /* <----- RECENT WORK SECTION -----> */
 
 .recent-work {
-    border: 2px solid purple;
-    padding: 10px 50px 30px 50px;
+    /* border: 2px solid purple; */
+    padding: 20px 30px 0 30px;
     height: auto;
+
+    text-align: center;
+}
+
+.recent-work h2 {
+    padding: 10px 0px;
 }
 
 .work-boxes-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
-    height: 550px;
+    height: 450px;
 
-    padding: 20px 30px;
+    padding: 20px 50px 0 50px;
+    /* border: 2px solid red; */
+}
 
-    border: 2px solid red;
+.dots {
+    display: flex;
+    gap: 20px;
+
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin: 20px 0;
+    cursor: pointer;
+    transform: translate(-50%, 0);
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: white;
+    /* border: 2px solid rgb(61, 60, 60); */
+    box-shadow: 2px 1px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.dot:hover {
+    transform: scale(1.08);
+}
+
+.dot--fill {
+    background-color: rgb(39,39,39);
+}
+
+.btn {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    
+    top: 50%;
+    /* transform: translate(0, -50%); */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 10px;
+
+    background-color: rgb(39,39,39);
+    color: white;
+}
+
+.btn--left {
+    left: 0;
+    transform: translate(-50%, 0);
+}
+
+.btn--right {
+    right: 0;
+    transform: translate(50%, 0);
+}
+
+.btn-icon {
+    height: 28px;
+    width: 28px;
 }
 
 .work-box {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    height: 100%;
-    padding: 10px;
+    padding: 10px 0;
+    max-width: 30%;
 
-    border: 2px solid green;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-radius: 2px rgba(0, 0, 0, 2);
 }
 
 .img-container img {
-    height: 250px;
-    width: 100%;
+    height: 210px;
+    width: auto;
     border-radius: 10px;
 }
 
@@ -250,12 +353,13 @@ button {
     display: grid;
     gap: 5px;
 
-    padding: 0 20px;
+    padding: 0 10px;
     text-align: center;
 }
 
 .work-text-container h5 {
-    margin: 30px 0 0 0;
+    margin: 20px 0 0 0;
+    font-size: 20px;
 }
 
 .work-text-container p {
@@ -263,12 +367,20 @@ button {
 }
 
 .work-cta-container {
-    margin: 10px auto;
+    margin: 20px auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+
+    max-height: 30px;
+}
+
+.work-cta-container button {
+    padding: 15px 18px;
+    max-height: 35px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    text-align: center;
-    justify-content: space-between;
 }
 
 .box-1 .primary {
@@ -305,21 +417,25 @@ button {
 /* <----- CLIENTS SECTION ----->  */
 
 .clients {
-    border: 2px solid red;
-    padding: 20px 50px;
+    /* border: 2px solid red; */
+    padding: 50px 50px;
 
     text-align: center;
+    margin: 40px 0 10px 0;
 }
 
 .clients p{
     top: 45px;
     margin: 0 0 30px 0;
+    font-size: 18px;
 }
 
 .clients-logos {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
+
+    margin: 10px auto;
 }
 
 .clients-logos img {
@@ -331,23 +447,33 @@ button {
 /* <------- BLOGS SECTION -------> */
 
 .blog-section {
-    border: 2px red solid;
+    /* border: 2px red solid; */
     text-align: center;
-    padding: 20px 20px;
+    padding: 20px 60px;
+
+    margin: 10px 30px;
+}
+
+.blog-section h2 {
+    padding: 10px;
 }
 
 .blogs-container {
     display: flex;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 60px;
+    height: auto;
 
-    border: 2px solid purple;
+    position: relative;
+
+    /* border: 2px solid purple; */
 }
 
 .blog-card {
     height: auto;
-    border: 2px solid black;
-    padding: 10px 15px 30px 15px;
+    border: 1px solid gray;
+    padding: 10px 20px 30px 20px;
+    border-radius: 10px;
 }
 
 .blog-card img {
@@ -359,45 +485,52 @@ button {
     box-shadow: 1px 1px black;
 }
 
-.blog-card p {
-    padding: 0 -5px;
+.blog-card h3 {
+    padding: 25px 0px 0 0px;
+}
 
+.blog-card p {
+    line-height: 1.5;
+    padding: 20px 0 10px 0;
 }
 
 .blog-card a {
-    margin: 20px 0 40 0px;
+    font-size: 20px;
     text-decoration: underline;
     color: #0D298F;
+    font-weight: medium;
 }
 
 /* <---- CONTACT SECTION -----> */
 
 .contact-section {
-    border: 2px solid darkblue;
+    /* border: 2px solid darkblue; */
     padding: 30px;
     text-align: center;
+
+    margin: 50px auto;
 }
 
 .form-container {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding: 10px;
     text-align: center;
+    justify-items: center;
+
+    position: relative;
 }
 
 .contact-section form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
     padding: 30px;
-    justify-content:center;
     text-align: left;
 }
 
 form .address {
     display: flex;
     flex-direction: column;
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: space-evenly;
+    justify-content: flex-end;
     padding-bottom: 0;
 }
 
@@ -408,11 +541,15 @@ form .address {
 form .message {
     display: grid;
     justify-content: center;
+    padding: 0 20px;
 }
 
 form .message textarea {
     resize: none;
     padding: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid gray;
 }
 
 form label {
@@ -420,44 +557,60 @@ form label {
     margin: 10px 0;
 }
 
-button .contact-submit {
-    margin: 20px auto;
-}
-
 input {
     padding: 10px;
     height: 20px;
     width: 100%;
     outline: none;
+    border-radius: 10px;
+    border: 2px solid gray;
 }
 
 input:focus::placeholder {
     color: transparent;
 }
 
+.form-container button {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    font-weight: medium;
+    border-radius: 10px;
+
+    margin: 0 auto;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
 /* <---- FOOTER SECTION -----> */
 
 .footer {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
 
-    padding: 20px 50px;
+    padding: 40px 50px;
+    background-color: rgb(249,251,250);
 }
 
 .footer-logo {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     justify-content: center;
 }
 
 .footer-logo p {
-    margin: 10px 0 0 0;
+    margin: 2px 0 0 0;
 }
 
 .footer-social-icons {
-    border: 2px solid green;
-    margin: 20px;
+    /* border: 2px solid green; */
+    margin: 30px;
     display: flex;
-    gap: 40px;
+    gap: 60px;
     justify-content: center;
 }
 
@@ -466,10 +619,6 @@ input:focus::placeholder {
     cursor: pointer;
 }
 
-.footer-copyright {
-    border: 2px solid purple;
-}
-
 .footer-copyright p {
-    margin: 0 0 0 0;
+    margin: 1px 0 0 0;
 }

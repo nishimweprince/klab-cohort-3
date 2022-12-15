@@ -1,0 +1,267 @@
+* {
+    font-family: Rubik, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-hero {
+    background-image: url('./img/contact-page/contact-hero-1.jpg');
+    background-size: cover;
+
+    padding: 20px 30px;
+}
+
+/* <----- NAVIGATION BAR ------> */
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 40px 80px;
+
+    /* border: 2px solid red; */
+}
+
+.logo img {
+    height: 15px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    justify-content: space-between;
+
+    max-width: 60%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.nav-link-container:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* <------ HERO SECTION ------->*/
+
+.hero {
+    padding: 40px 30px;
+    grid-template-columns: 38% 58%;
+    justify-content: space-between;
+
+    /* border: 2px solid purple; */
+    height: 470px;
+}
+
+.hero-text {
+    padding: 70px 40px;
+}
+
+.hero-text-brand {
+    margin: 30px auto;
+    line-height: 1.5;
+}
+
+.hero-text-brand h1 {
+    font-size: 35px;
+}
+
+
+.hero-text-cta {
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+
+.button {
+    padding: 15px 18px;
+    max-height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text-cta button {
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    font-weight: medium;
+    border-radius: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* <---- CONTACT SECTION -----> */
+
+.contact-section {
+    /* border: 2px solid darkblue; */
+    padding: 30px;
+}
+
+.contact-title {
+    /* border: 2px solid black; */
+    padding: 15px 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-title h2 {
+    font-size: 30px;
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.address-container {
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+.address-container h3 {
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+
+.contact-info-list {
+    padding: 10px 15px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.contact-address {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-address img {
+    height: 20px;
+}
+
+.form-container {
+    /* border: 2px solid red; */
+    padding: 10px;
+    text-align: center;
+    justify-items: center;
+
+    position: relative;
+}
+
+.contact-section form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px;
+    justify-content:center;
+    text-align: left;
+}
+
+form .address {
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-evenly;
+    padding-bottom: 0;
+}
+
+.address-name, .address-email {
+    margin: auto;
+}
+
+form .message {
+    display: grid;
+    justify-content: center;
+}
+
+form .message textarea {
+    resize: none;
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+
+form label {
+    display: block;
+    margin: 10px 0;
+}
+
+input {
+    padding: 10px;
+    height: 20px;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.form-container button {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    font-weight: medium;
+    border-radius: 10px;
+
+    margin: 0 auto;
+}
+
+
+/* <---- FOOTER SECTION -----> */
+
+.footer {
+    /* border: 2px solid red; */
+    text-align: center;
+
+    padding: 40px 50px;
+    background-color: rgb(249,251,250);
+}
+
+.footer-logo {
+    /* border: 2px solid purple; */
+    justify-content: center;
+}
+
+.footer-logo p {
+    margin: 2px 0 0 0;
+}
+
+.footer-social-icons {
+    /* border: 2px solid green; */
+    margin: 30px;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+
+.footer-social-icons img {
+    height: 30px;
+    cursor: pointer;
+}
+
+.footer-copyright p {
+    margin: 1px 0 0 0;
+}
