@@ -338,6 +338,11 @@ button {
     color: white;
 }
 
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1);
+}
+
 .btn--left {
     left: 0;
     transform: translate(-50%, 0);
@@ -482,8 +487,8 @@ button {
 
 .blogs-container {
     display: flex;
-    gap: 20px;
     padding: 20px 60px;
+    gap: 10px;
     height: auto;
 
     position: relative;
@@ -786,4 +791,23 @@ input:focus::placeholder {
 
 .form-feedback-show {
     display: block;
+}
+
+/* SWIPER JS */
+
+.swiper {
+    width: 95%;
+}
+
+.swiper-wrapper {
+    width: 600px;
+    padding: 20px 20px;
+}
+
+.swiper-slide {
+    max-width: 300px;
+}
+
+.swiper-pagination-holer {
+    border: 2px solid red;
 }
