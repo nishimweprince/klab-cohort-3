@@ -129,6 +129,16 @@
     max-height: 100%;
 }
 
+.secondary a {
+    text-decoration: none;
+    color: black;
+}
+
+.primary a {
+    text-decoration: none;
+    color: white;
+}
+
 button {
     padding: 5px 18px;
     max-height: 35px;
@@ -438,6 +448,10 @@ button {
 .box-3 .secondary {
     background-color: black;
     color:white;
+}
+
+.work-box button a {
+    color: white;
 }
 
 
