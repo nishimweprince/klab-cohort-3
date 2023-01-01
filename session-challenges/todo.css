@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-container {
+    border: 2px solid red;
+    margin: 40px auto;
+}
+
+.todo-container h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input[type="text"] {
+    padding: 5px 10px;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    border: 1.5px solid black;
+    padding: 5px 10px;
+}
+
+form input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+form input[type="button"] {
+    padding: 5px 10px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: medium;
+    font-size: 18px;
+}
+
+form input[type="button"]:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.01);
+}
+
+.todo-list-container {
+    border: 2px solid black;
+    width: 50%;
+    margin: 0 auto;
+}
