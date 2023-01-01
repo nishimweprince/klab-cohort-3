@@ -59,3 +59,35 @@ form input[type="button"]:hover {
     width: 50%;
     margin: 0 auto;
 }
+
+.todo-item {
+    margin: 5px auto;
+}
+
+.todo-cta {
+    display: flex;
+    gap: 5px;
+    border: 2px solid purple;
+}
+
+.delete-btn {
+    padding: 2px;
+}
+
+.edit-btn {
+    padding: 2px;
+}
+
+#todo-list {
+    list-style: none;
+}
+
+#todo-list li {
+    display: flex;
+    gap: 5px;
+    margin: 5px;
+}
+
+#todo-list li button {
+    padding: 2px;
+}
