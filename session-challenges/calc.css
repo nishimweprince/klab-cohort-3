@@ -8,7 +8,11 @@
 .calc-container {
     border: 2px solid red;
     padding: 30px;
+    display: flex;
+    gap: 50px;
 }
+
+/* CALCULATOR FORM */
 
 form {
     border: 2px solid purple;
@@ -61,4 +65,12 @@ form input[type="button"] {
 .calc-cta input[type="button"] {
     max-width: 60px;
     font-size: 20px;
+}
+
+/* CALCULATOR HISTORY */
+
+.calc-history {
+    border: 2px solid black;
+    min-width: 300px;
+    padding: 30px;
 }
