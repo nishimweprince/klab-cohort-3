@@ -5,8 +5,21 @@ let sqroot = document.querySelector("#square-root");
 let calc_screen = document.querySelector('input[type="text"]');
 let calc_value = "";
 let historylist = document.querySelector(".history-list");
+let clear_history = document.querySelector("#clear-history");
+let delete_btn = document.querySelector("#backspace");
 
-let calc_history = JSON.parse(localStorage.getItem("calc_history"));
+let calc_history = JSON.parse(localStorage.getItem("calc_history")) || [];
+
+clear_history.addEventListener("click", () => {
+  localStorage.clear();
+  calc_history = [];
+  historylist.innerHTML = "";
+});
+
+delete_btn.addEventListener("click", () => {
+  calc_value = calc_value.slice(0, -1);
+  calc_screen.value = calc_value;
+});
 
 input_btn.forEach((element) => {
   element.addEventListener("click", () => {
@@ -32,6 +45,10 @@ clear.addEventListener("click", () => {
 sqroot.addEventListener("click", () => {
   let result = Math.sqrt(calc_screen.value);
   calc_screen.value = result;
+  calc_history.push(calc_value + " = " + result);
+  calc_value = "";
+  localStorage.setItem("calc_history", JSON.stringify(calc_history));
+  getHistory();
 });
 
 let uniqueValues = [];

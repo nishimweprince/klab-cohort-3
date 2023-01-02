@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="todo.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <title>To-Do App</title>
+  </head>
+  <body onload="loadTodo()">
+    <div class="todo-container">
+      <h1>To-Do App</h1>
+      <form action="" method="POST">
+        <input
+          type="text"
+          id="todo-task"
+          name="todo"
+          placeholder="Enter your to-do here"
+        />
+        <input type="button" id="add-btn" value="Add" />
+      </form>
+      <div class="todo-list-container">
+        <ol id="todo-list"></ol>
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
