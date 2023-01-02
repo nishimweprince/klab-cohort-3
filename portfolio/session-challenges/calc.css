@@ -228,6 +228,14 @@ form input[type="button"]:hover {
     padding: 3px 10px;
     font-size: 16px;
     margin: 0 auto;
+    border-radius: 5px;
+}
+
+.calc-history input[type="button"]:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .calc-history h2 {
@@ -240,7 +248,24 @@ form input[type="button"]:hover {
 }
 
 .calc-history ol li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     padding: 5px;
+    /* border: 2px solid purple; */
+}
+
+.calc-history ol li .history-delete {
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+.calc-history ol li .history-delete:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: red;
+    color: white;
 }
 
 .calc-history ol span {

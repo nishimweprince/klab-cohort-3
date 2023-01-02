@@ -6,7 +6,7 @@ let calc_screen = document.querySelector('input[type="text"]');
 let calc_value = "";
 let historylist = document.querySelector(".history-list");
 let clear_history = document.querySelector("#clear-history");
-let delete_btn = document.querySelector("#backspace");
+let clear_btn = document.querySelector("#backspace");
 
 let calc_history = JSON.parse(localStorage.getItem("calc_history")) || [];
 
@@ -16,7 +16,7 @@ clear_history.addEventListener("click", () => {
   historylist.innerHTML = "";
 });
 
-delete_btn.addEventListener("click", () => {
+clear_btn.addEventListener("click", () => {
   calc_value = calc_value.slice(0, -1);
   calc_screen.value = calc_value;
 });
@@ -54,7 +54,15 @@ sqroot.addEventListener("click", () => {
 let uniqueValues = [];
 let listValues = [];
 
+// LOAD HISTORY FROM LOCAL STORAGE ON BUTTON CLICK
+
 function getHistory() {
+
+  let delete_btn = document.createElement("button");
+  delete_btn.innerText = "x";
+  delete_btn.className = "secondary history-delete";
+  delete_btn.addEventListener("click", deleteHistory);
+
   calc_history.forEach((element) => {
     if (!uniqueValues.includes(element)) {
       uniqueValues.push(element);
@@ -62,22 +70,39 @@ function getHistory() {
   });
 
   listValues.push(uniqueValues.slice(-1));
-  if (calc_history) {
+
     listValues.forEach((element) => {
       let history = document.createElement("li");
       history.innerHTML = element;
+      history.appendChild(delete_btn);
       historylist.append(history);
     });
-  }
   listValues = [];
+
 }
 
+// LOAD HISTORY FROM LOCAL STORAGE ON PAGE LOAD
+
 function loadHistory() {
-  if (calc_history) {
+
+  let delete_btn = document.createElement("button");
+  delete_btn.innerText = "x";
+  delete_btn.className = "secondary history-delete";
+  delete_btn.addEventListener("click", deleteHistory);
+
     calc_history.forEach((element) => {
       let history = document.createElement("li");
       history.innerHTML = element;
+      history.appendChild(delete_btn);
       historylist.append(history);
     });
-  }
+}
+
+function deleteHistory() {
+  let li = event.target.parentElement;
+  historylist.removeChild(li);
+  let index = calc_history.indexOf(li.innerText);
+  calc_history.splice(index, 1);
+  localStorage.setItem("calc_history", JSON.stringify(calc_history));
+  console.log(calc_history);
 }
