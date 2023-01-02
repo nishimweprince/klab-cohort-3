@@ -31,18 +31,25 @@ delete_btn.innerText = "Delete";
 delete_btn.className = "secondary todo-delete";
 delete_btn.addEventListener("click", deleteTodo);
 
-
 if (todoArray) {
-
-    //LOAD TODO FROM LOCAL STORAGE ON PAGE LOAD
+  //LOAD TODO FROM LOCAL STORAGE ON PAGE LOAD
   function loadTodo() {
+
+    todoArray.forEach((element) => {
+      
     let delete_btn = document.createElement("button");
     delete_btn.innerText = "Delete";
     delete_btn.className = "secondary todo-delete";
     delete_btn.addEventListener("click", deleteTodo);
-    todoArray.forEach((element) => {
+
+    let input = document.createElement("input");
+    input.type = "text";
+    input.className = "todo-edit-input";
+    input.setAttribute("readonly", true);
+    input.setAttribute("value", element);
+
       let li = document.createElement("li");
-      li.innerText = element;
+      li.appendChild(input);
       li.appendChild(delete_btn);
       todolist.appendChild(li);
     });
@@ -51,18 +58,26 @@ if (todoArray) {
   // GET TODO FROM LOCAL STORAGE ON ADD BUTTON CLICK
   function getTodo() {
 
-    let delete_btn = document.createElement("button");
-    delete_btn.innerText = "Delete";
-    delete_btn.className = "secondary todo-delete";
-    delete_btn.addEventListener("click", deleteTodo);
-
     listValues.push(todoArray.slice(-1));
 
     listValues.forEach((element) => {
+
+      let delete_btn = document.createElement("button");
+      delete_btn.innerText = "Delete";
+      delete_btn.className = "secondary todo-delete";
+      delete_btn.addEventListener("click", deleteTodo);
+
+      let input = document.createElement("input");
+      input.type = "text";
+      input.className = "todo-edit-input";
+      input.setAttribute("readonly", true);
+      input.setAttribute("value", element);
+
       let li = document.createElement("li");
-      li.innerText = element;
+      li.appendChild(input);
       li.appendChild(delete_btn);
       todolist.appendChild(li);
+      console.log(li.innerText);
     });
     listValues = [];
   }
